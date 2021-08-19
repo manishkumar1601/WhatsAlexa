@@ -320,6 +320,7 @@
         },
         "ttp": {
             "TTP_DESC": "Converts text to plain painting.",
+            "EMOJI_DESC": "Converts Emoji To Image ( Png ).",
             "QR_DESC": "It Converts Text To Qr Code",
             "ATTP_DESC": "Adds rainbow effect to the text as a sticker.",
             "TEXT_MAKER": "Set of commands to convert text into images.",
