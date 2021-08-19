@@ -1,26 +1,16 @@
-/* Copyright (C) 2020 Yusuf Usta.
-
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-
-WhatsAsena - Yusuf Usta
-*/
-
-const Asena = require('../events');
-const {MessageType} = require('@adiwajshing/baileys');
-const fs = require('fs');
-const ffmpeg = require('fluent-ffmpeg');
-const {execFile} = require('child_process');
-const cwebp = require('cwebp-bin');
-const Config = require('../config');
-
-const Language = require('../language');
-const Lang = Language.getString('sticker');
-
+let WhatsAlexa = require('../events');
+let {MessageType} = require('@adiwajshing/baileys');
+let fs = require('fs');
+let ffmpeg = require('fluent-ffmpeg');
+let {execFile} = require('child_process');
+let cwebp = require('cwebp-bin');
+let Config = require('../config');
+let Language = require('../language');
+let Lang = Language.getString('sticker');
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'sticker', fromMe: true, desc: Lang.STICKER_DESC}, (async (message, match) => {    
+    WhatsAlexa.addCommand({pattern: 'sticker', fromMe: true, desc: Lang.STICKER_DESC}, (async (message, match) => {    
 
         if (message.jid === '905524317852-1612300121@g.us') {
 
@@ -60,7 +50,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'sticker', fromMe: false, desc: Lang.STICKER_DESC}, (async (message, match) => {    
+    WhatsAlexa.addCommand({pattern: 'sticker', fromMe: false, desc: Lang.STICKER_DESC}, (async (message, match) => {    
 
         if (message.jid === '905524317852-1612300121@g.us') {
 
