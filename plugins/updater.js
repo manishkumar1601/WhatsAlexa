@@ -1,17 +1,16 @@
-const simpleGit = require('simple-git');
-const git = simpleGit();
-const Asena = require('../events');
-const {MessageType} = require('@adiwajshing/baileys');
-const Config = require('../config');
-const exec = require('child_process').exec;
-const Heroku = require('heroku-client');
-const { PassThrough } = require('stream');
-const heroku = new Heroku({ token: Config.HEROKU.API_KEY })
-const Language = require('../language');
-const Lang = Language.getString('updater');
+let simpleGit = require('simple-git');
+let git = simpleGit();
+let WhatsAlexa = require('../events');
+let {MessageType} = require('@adiwajshing/baileys');
+let Config = require('../config');
+let exec = require('child_process').exec;
+let Heroku = require('heroku-client');
+let { PassThrough } = require('stream');
+let heroku = new Heroku({ token: Config.HEROKU.API_KEY })
+let Language = require('../language');
+let Lang = Language.getString('updater');
 
-
-Asena.addCommand({pattern: 'update$', fromMe: true, desc: Lang.UPDATER_DESC}, (async (message, match) => {
+WhatsAlexa.addCommand({pattern: 'update$', fromMe: true, desc: Lang.UPDATER_DESC}, (async (message, match) => {
     await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
@@ -23,7 +22,7 @@ Asena.addCommand({pattern: 'update$', fromMe: true, desc: Lang.UPDATER_DESC}, (a
         var degisiklikler = Lang.NEW_UPDATE;
         commits['all'].map(
             (commit) => {
-                degisiklikler += '🔹 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
+                degisiklikler += '🆕🎉 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n\n*WhatsAlexa*';
             }
         );
 
@@ -34,7 +33,7 @@ Asena.addCommand({pattern: 'update$', fromMe: true, desc: Lang.UPDATER_DESC}, (a
     }
 }));
 
-Asena.addCommand({pattern: 'update now$', fromMe: true, desc: Lang.UPDATE_NOW_DESC, dontAddCommandList: true}, (async (message, match) => {
+WhatsAlexa.addCommand({pattern: 'update now$', fromMe: true, desc: Lang.UPDATE_NOW_DESC, dontAddCommandList: true}, (async (message, match) => {
     await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
@@ -77,7 +76,7 @@ Asena.addCommand({pattern: 'update now$', fromMe: true, desc: Lang.UPDATE_NOW_DE
                     exec('npm install').stderr.pipe(process.stderr);
                 } else if (err) {
                     await message.client.sendMessage(
-                        message.jid,'*❌ Güncelleme başarısız oldu!*\n*Hata:* ```' + err + '```', MessageType.text);
+                        message.jid,'*❌ An Error Occurred!*\n*Error:* ```' + err + '```', MessageType.text);
                 }
             }));
             await guncelleme.delete();
