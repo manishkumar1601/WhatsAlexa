@@ -5,6 +5,8 @@ let axios = require('axios');
 let request = require('request');
 let got = require("got");
 let Config = require('../config');
+let Language = require('../language');
+let Lang = Language.getString('unvoice');
 
 if (Config.WORKTYPE == 'private') {
 
