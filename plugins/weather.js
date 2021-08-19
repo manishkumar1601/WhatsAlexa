@@ -1,23 +1,13 @@
-/* Copyright (C) 2020 Yusuf Usta.
-
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-
-WhatsAsena - Yusuf Usta
-*/
-
-const Asena = require('../events');
-const {MessageType} = require('@adiwajshing/baileys');
-const got = require('got');
-const Config = require('../config');
-
-
-const Language = require('../language');
-const Lang = Language.getString('weather');
+let WhatsAlexa = require('../events');
+let {MessageType} = require('@adiwajshing/baileys');
+let got = require('got');
+let Config = require('../config');
+let Language = require('../language');
+let Lang = Language.getString('weather');
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'weather ?(.*)', desc: Lang.WEATHER_DESC, fromMe: true}, async (message, match) => {
+    WhatsAlexa.addCommand({pattern: 'weather ?(.*)', desc: Lang.WEATHER_DESC, fromMe: true}, async (message, match) => {
 
             if (message.jid === '905524317852-1612300121@g.us') {
 
@@ -42,7 +32,7 @@ if (Config.WORKTYPE == 'private') {
 }
 if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'weather ?(.*)', desc: Lang.WEATHER_DESC, fromMe: false}, async (message, match) => {
+    WhatsAlexa.addCommand({pattern: 'weather ?(.*)', desc: Lang.WEATHER_DESC, fromMe: false}, async (message, match) => {
 
             if (message.jid === '905524317852-1612300121@g.us') {
 
