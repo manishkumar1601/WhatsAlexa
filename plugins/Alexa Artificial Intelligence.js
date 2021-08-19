@@ -142,7 +142,7 @@ WhatsAlexa.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async 
                 var unique_ident = message.client.user.jid.split('@')[0]      
                 let acc = os.userInfo().homedir.split('Whats')[1].split('Alexa/')[0] == 'Alexa' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
                 var ainame = os.userInfo().homedir.split('Whats')[1].split('Alexa/')[0]
-                if (ainame !== 'Asena') return;
+                if (ainame !== 'Alexa') return;
                 var finm = message.message
                 var ldet = lngDetector.detect(finm)
                 var trmsg = ''
