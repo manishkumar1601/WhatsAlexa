@@ -50,10 +50,10 @@
             "GIVE_ME_CODE": "*Beri aku kode!*"
         },
         "heroku": {
-            "RESTART_DESC": "Mulai ulang WhatsAsena",
-            "RESTART_MSG": "```memulai ulang harap tunggu...```",
-            "SHUTDOWN_DESC": "Matikan WhatsAsena",
-            "SHUTDOWN_MSG": "```mematikan ⛔```",
+            "RESTART_DESC": "Mulai ulang WhatsAlexa",
+            "RESTART_MSG": "```🔁 memulai ulang harap tunggu...```",
+            "SHUTDOWN_DESC": "Matikan WhatsAlexa",
+            "SHUTDOWN_MSG": "```mematikan WhatsAlexa ⛔```",
             "DYNO_DESC": "Periksa penggunaan heroku dyno",
             "DYNO_TOTAL": "```Total Kuota```",
             "DYNO_USED": "```Kuota terpakai```",
@@ -324,7 +324,10 @@
             "UV_PROC": "```Mengonversi ke rekaman suara..```",
             "SPDF_DESC": "Mengonversi Situs menjadi PDF",
             "SPDF_LINK": "*Anda Harus Memasukkan URL*",
-            "SPDF_PROC": "```Mengonversi Situs menjadi PDF```"
+            "SPDF_PROC": "```Mengonversi Situs menjadi PDF```",
+            "UA_DESC": "Mengonversi rekaman suara menjadi File audio.",
+            "UA_REPLY": "*Harus Membalas rekaman suara*",
+            "UA_PROC": "```Mengonversi Rekaman Suara Menjadi File Audio...```"
         },
         "carbon": {
             "CARBON_DESC": "Mengonversi teks menjadi foto dengan carbon.sh.",
