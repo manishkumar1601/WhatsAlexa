@@ -1,4 +1,4 @@
-let Asena = require('../events');
+let WhatsAlexa = require('../events');
 let {MessageType} = require('@adiwajshing/baileys');
 let Config = require('../config');
 let Language = require('../language');
@@ -6,7 +6,7 @@ let Lang = Language.getString('tagall');
 
 if (Config.WORKTYPE == 'private') {
     
-    Asena.addCommand({pattern: 'tagadmin$', fromMe: true, desc: Lang.TAGADMİN}, (async (message, match) => {
+    WhatsAlexa.addCommand({pattern: 'tagadmin$', fromMe: true, desc: Lang.TAGADMİN}, (async (message, match) => {
         let grup = await message.client.groupMetadata(message.jid);
         var jids = [];
         mesaj = '';
@@ -21,7 +21,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
     
-    Asena.addCommand({pattern: 'tagadmin$', fromMe: false, desc: Lang.TAGADMİN}, (async (message, match) => {
+    WhatsAlexa.addCommand({pattern: 'tagadmin$', fromMe: false, desc: Lang.TAGADMİN}, (async (message, match) => {
         let grup = await message.client.groupMetadata(message.jid);
         var jids = [];
         mesaj = '';
