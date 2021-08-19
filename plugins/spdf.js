@@ -18,7 +18,7 @@ if (Config.WORKTYPE == 'private') {
 
     await message.sendMessage(Buffer.from(webimage.data), MessageType.document, {mimetype: Mimetype.pdf, filename: 'WhatsAlexa-Site-To-PDF-Feature-Made-By-Toxic-Devil.pdf})
 
-    }));  
+   }));  
 }
 else if (Config.WORKTYPE == 'public') {
 
@@ -32,5 +32,5 @@ else if (Config.WORKTYPE == 'public') {
 
     await message.sendMessage(Buffer.from(webimage.data), MessageType.document, {mimetype: Mimetype.pdf, filename: 'WhatsAlexa-Site-To-PDF-Feature-Made-By-Toxic-Devil.pdf})
 
-    }));   
+   }));   
 }
