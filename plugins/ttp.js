@@ -41,7 +41,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-    WhatsAlexa.addCommand({pattern: 'emoji ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    WhatsAlexa.addCommand({pattern: 'emoji ?(.*)', fromMe: true, desc: Lang.EMOJI_DESC}, (async (message, match) => {
 
       if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
   
@@ -85,7 +85,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
     
-    WhatsAlexa.addCommand({pattern: 'emoji ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    WhatsAlexa.addCommand({pattern: 'emoji ?(.*)', fromMe: false, desc: Lang.EMOJI_DESC}, (async (message, match) => {
 
       if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
   
