@@ -38,6 +38,57 @@ WhatsAlexa.addCommand({pattern: 'shutdown', fromMe: true, desc: Lang.SHUTDOWN_DE
     });
 }));
 
+WhatsAlexa.addCommand({pattern: 'editvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}, (async(message, match) => {
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.KEY_VAL_MISSING, MessageType.text);
+
+    if ((varKey = match[1].split(':')[0]) && (varValue = match[1].split(':')[1])) {
+        await heroku.patch(baseURI + '/config-vars', {
+            body: {
+                [varKey]: varValue
+            }
+        }).then(async (app) => {
+            await message.client.sendMessage(message.jid,Lang.SET_SUCCESS.format(varKey, varValue), MessageType.text);
+        });
+    } else {
+        await message.client.sendMessage(message.jid,Lang.INVALID, MessageType.text);
+    }
+}));
+
+WhatsAlexa.addCommand({pattern: 'removevar ?(.*)', fromMe: true, desc: Lang.DELVAR_DESC}, (async (message, match) => {
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.KEY_VAL_MISSING, MessageType.text);
+    await heroku.get(baseURI + '/config-vars').then(async (vars) => {
+        key = match[1].trim();
+        for (vr in vars) {
+            if (key == vr) {
+                await heroku.patch(baseURI + '/config-vars', {
+                    body: {
+                        [key]: null
+                    }
+                });
+                return await message.client.sendMessage(message.jid,Lang.DEL_SUCCESS.format(key), MessageType.text);
+            }
+        }
+        await message.client.sendMessage(message.jid,Lang.NOT_FOUND, MessageType.text);
+    }).catch(async (error) => {
+        await message.client.sendMessage(message.jid,error.message, MessageType.text);
+    });
+
+}));
+
+WhatsAlexa.addCommand({pattern: 'getvar ?(.*)', fromMe: true, desc: Lang.GETVAR_DESC}, (async (message, match) => {
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.KEY_VAL_MISSING, MessageType.text);
+    await heroku.get(baseURI + '/config-vars').then(async (vars) => {
+        for (vr in vars) {
+            if (match[1].trim() == vr) return await message.sendMessage("```{} - {}```".format(vr, vars[vr]));
+        }
+        await message.client.sendMessage(message.jid,Lang.NOT_FOUND, MessageType.text);
+    }).catch(async (error) => {
+        await message.client.sendMessage(message.jid,error.message, MessageType.text);
+    });
+}));
 
 if (Config.WORKTYPE == 'private') {
 
