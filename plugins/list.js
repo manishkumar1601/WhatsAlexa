@@ -15,7 +15,7 @@ if (Config.WORKTYPE == 'private') {
 
         var CMD_HELP = '';
         if (match[1] === '') {
-            Asena.commands.map(
+            WhatsAlexa.commands.map(
                 async (command) =>  {
                     if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
@@ -49,7 +49,7 @@ if (Config.WORKTYPE == 'private') {
                 return;
             }
             var CMD_HELP = '';
-            Asena.commands.map(
+            WhatsAlexa.commands.map(
                 async (command) =>  {
                     if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
@@ -92,7 +92,7 @@ else if (Config.WORKTYPE == 'public') {
 
         var CMD_HELP = '';
         if (match[1] === '') {
-            Asena.commands.map(
+            WhatsAlexa.commands.map(
                 async (command) =>  {
                     if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
@@ -126,7 +126,7 @@ else if (Config.WORKTYPE == 'public') {
                 return;
             }
             var CMD_HELP = '';
-            Asena.commands.map(
+            WhatsAlexa.commands.map(
                 async (command) =>  {
                     if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
