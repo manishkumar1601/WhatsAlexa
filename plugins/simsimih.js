@@ -3,6 +3,8 @@ let {MessageType} = require('@adiwajshing/baileys');
 let got = require('got');
 let Config = require('../config');
 let td = Config.WORKTYPE == 'public' ? false : true
+let Language = require('../language');
+let Lang = Language.getString('ai');
 
 WhatsAlexa.addCommand({pattern: 'simi ?(.*)', fromMe: td, desc: Lang.SIMI_DESC}, async (message, match) => {
 	if (match[1] === 'xx') return await message.reply(Lang.INVALID_REQ);
