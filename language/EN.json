@@ -49,9 +49,9 @@
             "GIVE_ME_CODE": "*Give me a code!*"
         },
         "heroku": {
-            "RESTART_DESC": "Restart WhatsAsena",
-            "RESTART_MSG": "```Restarting...```",
-            "SHUTDOWN_DESC": "Shutdown WhatsAsena",
+            "RESTART_DESC": "Restart WhatsAlexa",
+            "RESTART_MSG": "```🔁 Restarting...```",
+            "SHUTDOWN_DESC": "Shutdown WhatsAlexa",
             "SHUTDOWN_MSG": "```Shutting down ⛔```",
             "DYNO_DESC": "Check heroku dyno usage",
             "DYNO_TOTAL": "```Total Quota```",
@@ -308,7 +308,10 @@
             "UV_PROC": "```Converting to Sound Recording..```",
             "SPDF_DESC": "Converts a Site into PDF",
             "SPDF_LINK": "*You Must Enter a URL*",
-            "SPDF_PROC": "```Converting Site into PDF```"
+            "SPDF_PROC": "```Converting Site into PDF```",
+            "UA_DESC": "Converts sound recording to an audio File.",
+            "UA_REPLY": "*Must Reply to a sound recording*",
+            "UA_PROC": "```Converting Sound recording To an Audio File...```"
         },
         "carbon": {
             "CARBON_DESC": "Uses carbon.sh for Text-to-Image",
