@@ -336,6 +336,7 @@
         },
         "ttp": {
             "TTP_DESC": "Mengonversi teks menjadi lukisan biasa.",
+            "EMOJI_DESC": "Konversi Emoji Ke Gambar ( Png ).",
             "QR_DESC": "Ini Mengonversi Teks Menjadi Kode Qr.",
             "NEED_WORD": "*Anda harus memasukkan kata-kata!*",
             "ANIME_DESC": "Dia menulis teks di dalam spanduk yang dipegang oleh gadis anime itu.",
