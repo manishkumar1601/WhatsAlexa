@@ -45,7 +45,7 @@
             "UNMUTE_DESC": "Open the group chat. Anyone can send a message.",
             "UNMUTED": "```✔ The group chat has unmuted!```",
             "KICKALL_DESC": "Kicks everyone from the group.",
-            "KICKALL_WARN": "The Group owner/creator and the bot will not be kicked.",
+            "KICKALL_WARN": "The bot and the Group owner/creator will not be kicked.",
             "KICKALL_DMSG": "*✅ Successfully Kicked Everyone from the group*",
             "INVITE_DESC": "Provides the group's invitation link.",
             "INVITE": "```Invitation link: ```"
