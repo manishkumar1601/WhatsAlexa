@@ -59,16 +59,16 @@ WhatsAlexa.addCommand({pattern: 'kickall ?(.*)', fromMe: true, warn: Lang.KICKAL
       var jids = [];
       mesaj = '';
       grup['participants'].map(async (uye) => {
-      await message.client.sendMessage(message.jid, Lang.KICKALL_DMSG, MessageType.text);
       await message.client.groupRemove(message.jid, uye);
+      await message.client.sendMessage(message.jid, Lang.KICKALL_DMSG, MessageType.text);
   }
   else {
       grup = await message.client.groupMetadata(message.jid);
       var jids = [];
       mesaj = '';
       grup['participants'].map(async (uye) => {
-      await message.client.sendMessage(message.jid, Config.KICKALLMSG, MessageType.text);
       await message.client.groupRemove(message.jid, uye);
+      await message.client.sendMessage(message.jid, Config.KICKALLMSG, MessageType.text);
         }
     }
 }));
