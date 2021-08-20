@@ -6,7 +6,7 @@ let got = require('got');
 let fs = require('fs');
 let Db = require('./sql/plugin');
 let Language = require('../language');
-let Lang = Language.getString('_plugin');
+let Lang = Language.getString('plugin');
 let NLang = Language.getString('updater');
 
 const heroku = new Heroku({
