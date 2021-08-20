@@ -329,7 +329,7 @@
             "UA_REPLY": "*Must Reply to a sound recording*",
             "UA_PROC": "```Converting Sound recording To an Audio File...```",
             "CLR_DESC": "Clear all the messages From this Chat.",
-            "CLR_PROC": "```Clearing all the Message 🗑️```",
+            "CLR_PROC": "```Clearing all the Messages 🗑️```",
             "CLR_DONE": "*✅️ Successfully Cleared Messages From this Chat*."
         },
         "carbon": {
