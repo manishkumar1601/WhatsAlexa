@@ -50,7 +50,7 @@ WhatsAlexa.addCommand({pattern: 'kick ?(.*)', fromMe: true, onlyGroup: true, des
     }
 }));
 
-WhatsAlexa.addCommand({pattern: 'kickall ?(.*)', fromMe: true, desc: Lang.KICKALL_DESC }, (async (message, match) => {
+WhatsAlexa.addCommand({pattern: 'kickall ?(.*)', fromMe: true, warn: Lang.KICKALL_WARN, desc: Lang.KICKALL_DESC }, (async (message, match) => {
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
     
