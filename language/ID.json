@@ -345,7 +345,7 @@
             "UA_REPLY": "*Harus Membalas rekaman suara*",
             "UA_PROC": "```Mengonversi Rekaman Suara Menjadi File Audio...```",
             "CLR_DESC": "Hapus semua pesan Dari Obrolan ini.",
-            "CLR_PROC": "```Menghapus semua Pesan 🗑️```",
+            "CLR_PROC": "```Menghapus semua Pesan... 🗑️```",
             "CLR_DONE": "*✅️ Berhasil Menghapus Pesan Dari Obrolan ini.*"
         },
         "carbon": {
