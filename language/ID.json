@@ -343,7 +343,10 @@
             "SPDF_PROC": "```Mengonversi Situs menjadi PDF```",
             "UA_DESC": "Mengonversi rekaman suara menjadi File audio.",
             "UA_REPLY": "*Harus Membalas rekaman suara*",
-            "UA_PROC": "```Mengonversi Rekaman Suara Menjadi File Audio...```"
+            "UA_PROC": "```Mengonversi Rekaman Suara Menjadi File Audio...```",
+            "CLR_DESC": "Hapus semua pesan Dari Obrolan ini.",
+            "CLR_PROC": "```Menghapus semua Pesan 🗑️```",
+            "CLR_DONE": "*✅️ Berhasil Menghapus Pesan Dari Obrolan ini.*"
         },
         "carbon": {
             "CARBON_DESC": "Mengonversi teks menjadi foto dengan carbon.sh.",
