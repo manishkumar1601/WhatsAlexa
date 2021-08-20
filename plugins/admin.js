@@ -54,7 +54,7 @@ WhatsAlexa.addCommand({pattern: 'kickall ?(.*)', fromMe: true, desc: Lang.KICKAL
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
     
-  if (Config.BANMSG == 'default') {
+  if (Config.KICKALLMSG == 'default') {
       grup = await message.client.groupMetadata(message.jid);
       var jids = [];
       mesaj = '';
