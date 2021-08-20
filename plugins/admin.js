@@ -50,29 +50,6 @@ WhatsAlexa.addCommand({pattern: 'kick ?(.*)', fromMe: true, onlyGroup: true, des
     }
 }));
 
-WhatsAlexa.addCommand({pattern: 'kickall ?(.*)', fromMe: true, warn: Lang.KICKALL_WARN, desc: Lang.KICKALL_DESC }, (async (message, match) => {
-    var im = await checkImAdmin(message);
-    if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
-    
-  if (Config.KICKALLMSG == 'default') {
-      grup = await message.client.groupMetadata(message.jid);
-      var jids = [];
-      mesaj = '';
-      grup['participants'].map(async (uye) => {
-      await message.client.groupRemove(message.jid, uye);
-      await message.client.sendMessage(message.jid, Lang.KICKALL_DMSG, MessageType.text);
-  }
-  else {
-      grup = await message.client.groupMetadata(message.jid);
-      var jids = [];
-      mesaj = '';
-      grup['participants'].map(async (uye) => {
-      await message.client.groupRemove(message.jid, uye);
-      await message.client.sendMessage(message.jid, Config.KICKALLMSG, MessageType.text);
-        }
-    }
-}));
-
 WhatsAlexa.addCommand({pattern: 'add(?: |$)(.*)', fromMe: true, onlyGroup: true, desc: Lang.ADD_DESC}, (async (message, match) => {  
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
