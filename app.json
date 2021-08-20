@@ -41,10 +41,10 @@
             "required": true,
             "value": "^[#]"
         },
-        "NO_LOG": {
-            "description": "Set true if you don't want to see error log.",
+        "KICKALL_MSG": {
+            "description": "Customizable Kick All Message! Use => default, to change back.",
             "required": true,
-            "value": "false"
+            "value": "default"
         },
         "SEND_READ": {
             "description": "The bot reads the incoming messages ( only commands sent by others so privacy is not breaking there ).",
