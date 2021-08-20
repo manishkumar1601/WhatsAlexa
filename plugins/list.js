@@ -40,8 +40,8 @@ if (Config.WORKTYPE == 'private') {
             );
         
             await message.client.sendMessage(
-                message.jid,'● *WhatsAlexa* ●\n\n' + CMD_HELP, MessageType.text
-            );    
+                message.jid,'● *WhatsAlexa* ●\n\n' + CMD_HELP, MessageType.text, {contextInfo: { forwardingScore: 1000, isForwarded: true }
+            })
         } else {
 
             if (message.jid === '905524317852-1612300121@g.us') {
