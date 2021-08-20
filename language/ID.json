@@ -11,6 +11,22 @@
             "NOT_FOUND": "*Saya tidak dapat menemukan perintah seperti ini*",
             "WARN": "Peringatan"
         },
+        "plugin": {
+            "INSTALL_DESC": "Penginstalan plugin.",
+            "UNOFF": "⚠️ *Perhatian!* \n*Plugin yang Anda instal tidak resmi!*",
+            "NEED_URL": "Harap masukkan URL Plugin! Contoh:",
+            "INVALID_URL": "```Harap masukkan url yang valid!```",
+            "INVALID_PLUGIN": "*❌ Plugin Anda tidak valid!*\n*Kesalahan:*",
+            "INSTALLED": "*✅ Plugin berhasil diinstal!*",
+            "PLUGIN_DESC": "Menunjukkan plugin yang telah Anda instal.",
+            "INSTALLED_FROM_REMOTE": "*Plugin yang Anda instal secara eksternal:*\n",
+            "NO_PLUGIN": "*Anda belum menginstal plugin eksternal!*",
+            "REMOVE_DESC": "Menghapus plugin.",
+            "NEED_PLUGIN": "```Harap masukkan sebuah Plugin! Contoh: .plugin __test```",
+            "NOT_FOUND_PLUGIN": "```Mungkin Anda telah menginstal plugin seperti itu, atau mungkin belum. Tapi itu pasti tidak sekarang.```",
+            "DELETED": "*✅ Plugin berhasil dihapus! Anda harus memulai ulang agar perubahan diterapkan.*",
+            "WARN": "Dapatkan plugin hanya dari saluran t.me/remasterplugin."
+        },
         "admin": {
             "BAN_DESC": "Ban seseorang dalam grup. Balas pesan atau tandai seseorang untuk menggunakan perintah.",
             "IM_NOT_ADMIN": "*Saya bukan admin di grup ini!*",
