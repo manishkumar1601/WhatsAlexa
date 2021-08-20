@@ -327,7 +327,10 @@
             "SPDF_PROC": "```Converting Site into PDF```",
             "UA_DESC": "Converts sound recording to an audio File.",
             "UA_REPLY": "*Must Reply to a sound recording*",
-            "UA_PROC": "```Converting Sound recording To an Audio File...```"
+            "UA_PROC": "```Converting Sound recording To an Audio File...```",
+            "CLR_DESC": "Clear all the messages From this Chat.",
+            "CLR_PROC": "```Clearing all the Message 🗑️```",
+            "CLR_DONE": "*✅️ Successfully Cleared Messages From this Chat*."
         },
         "carbon": {
             "CARBON_DESC": "Uses carbon.sh for Text-to-Image",
